@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 
+
 class JsonError(Exception):
     def __init__(self, error, description, status_code=401, headers=None):
         Exception.__init__(self)

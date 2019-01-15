@@ -5,6 +5,8 @@ A boilerplate Flask RESTful API
 - Python 3.6+
 - pipenv
 - pyenv (optional)
+- MongoDB (optional)
+- Redis (optional)
 
 # Setup
 ### Install pipenv

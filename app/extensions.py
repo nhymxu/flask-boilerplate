@@ -10,6 +10,16 @@ config.from_object(os.getenv('FLASK_CONFIG') or 'config')
 
 cache = Cache(config=config.get('CACHE'))
 
+if config.get("MONGO_URI", None):
+    from mongoengine import connect
+
+    db = connect(alias="default", host=config.get("MONGO_URI", "localhost"))
+
+if config.get('REDIS_URL', None):
+    from redis import StrictRedis
+
+    db_redis = StrictRedis.from_url(config.get("REDIS_URL", "redis://localhost:6379/0"))
+
 if config.get('SENTRY_ENABLED', False) and config.get('SENTRY_DSL', '') != '':
     import sentry_sdk
     from sentry_sdk.integrations.flask import FlaskIntegration
