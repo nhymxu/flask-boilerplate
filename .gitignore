@@ -102,3 +102,9 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+# Intellij project settings
+.idea
+
+# VS Code project settings
+.vscode

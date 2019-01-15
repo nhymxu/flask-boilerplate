@@ -1,0 +1,16 @@
+[flake8]
+ignore = D203, E125
+max-line-length = 120
+# max-complexity = 18 # better is 10
+# ignore = E203, E266, E501, W503, F403, F401
+# select = B,C,E,F,W,T4,B9
+exclude =
+    .git,
+    __pycache__,
+    .venv,
+    docs,
+    config.py,
+    old,
+    build,
+    dist,
+    app/models/__init__.py,
