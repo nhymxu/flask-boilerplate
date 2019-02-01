@@ -14,3 +14,7 @@ exclude =
     build,
     dist,
     app/models/__init__.py,
+# Flake8 import order config
+import-order-style = pycharm
+application-import-names = app
+application-package-names = app

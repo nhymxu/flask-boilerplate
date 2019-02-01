@@ -7,6 +7,9 @@ verify_ssl = true
 coverage = "*"
 flake8 = "*"
 pytest = "*"
+flake8-builtins = "*"
+flake8-blind-except = "*"
+flake8-import-order = "*"
 
 [packages]
 flask = "*"
