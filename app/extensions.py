@@ -24,7 +24,16 @@ if config.get('SENTRY_ENABLED', False) and config.get('SENTRY_DSL', '') != '':
     import sentry_sdk
     from sentry_sdk.integrations.flask import FlaskIntegration
 
-    sentry_sdk.init(
-        dsn=config.get('SENTRY_DSL', ''),
-        integrations=[FlaskIntegration()]
-    )
+    release_version = config.get('RELEASE_VERSION', None)
+    if release_version:
+        sentry_release = "flask-base@" + release_version
+        sentry_sdk.init(
+            dsn=config.get('SENTRY_DSL', ''),
+            integrations=[FlaskIntegration()],
+            release=sentry_release
+        )
+    else:
+        sentry_sdk.init(
+            dsn=config.get('SENTRY_DSL', ''),
+            integrations=[FlaskIntegration()]
+        )

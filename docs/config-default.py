@@ -11,3 +11,5 @@ DEBUG_PORT = 8000  # port for run flask debug
 MONGO_URI = "mongodb://127.0.0.1/nhymxu"
 
 REDIS_URL = "redis://localhost:6379/0"
+
+RELEASE_VERSION = '1.0.0'
