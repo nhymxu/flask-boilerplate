@@ -109,4 +109,5 @@ venv.bak/
 # VS Code project settings
 .vscode
 
+config.py
 Pipfile.lock
