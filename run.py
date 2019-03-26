@@ -5,6 +5,12 @@ from app import create_app
 
 flask_app = create_app()
 
+
+@flask_app.route("/ping")
+def app_ping():
+    return "pong"
+
+
 if __name__ == "__main__":
     from app.extensions import config
 
