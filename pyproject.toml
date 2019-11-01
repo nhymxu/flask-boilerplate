@@ -14,7 +14,6 @@ python-dateutil = "^2.8"
 simpleflake = "^0.1.5"
 sentry-sdk = "^0.13.1"
 redis = "^3.3"
-mongoengine = "^0.18.2"
 meinheld = "^1.0"
 
 [tool.poetry.dev-dependencies]
