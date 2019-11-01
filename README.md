@@ -3,19 +3,18 @@ A boilerplate Flask RESTful API
 
 # Requirements
 - Python 3.6+
-- pipenv
+- poetry
 - pyenv (optional)
 - MongoDB (optional)
 - Redis (optional)
 
 # Setup
-### Install pipenv
-`pip install pipenv --user`
+### Install poetry
+```shell script
+curl -sSL https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py | python
+```
 
-### Setup env storage per project
-Edit .bashrc or .zshrc and add this line
-
-`export PIPENV_VENV_IN_PROJECT=1`
+Docs: [https://poetry.eustace.io/docs/](https://poetry.eustace.io/docs/)
 
 ### Create virtual environment for project
 cd to your project directory
@@ -24,15 +23,26 @@ cd to your project directory
 
 create virtual environment
 
-`pipenv --python 3.6`
+`python3 -m venv .venv`
 
 ### Install package for virtual environment with dev package
-`pipenv install --dev`
+
+active virtualenv
+
+```shell script
+source .venv/bin/activate
+```
+
+install requirement packages
+
+```shell script
+poetry install
+```
 
 ### Run flask for dev
-`pipenv run python run.py`
+`python run.py`
 
 # Test before pull request or commit
 
 ## Check code style
-`pipenv run flake8 app`
+`flake8 app`
