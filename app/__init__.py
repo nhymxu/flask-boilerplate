@@ -3,6 +3,9 @@
 
 from flask import Flask, jsonify
 from flask_cors import CORS
+from flask_talisman import Talisman
+from flask_seasurf import SeaSurf
+
 
 # Import module
 from app import commands, extensions
@@ -32,6 +35,8 @@ def create_app():
 def register_extensions(app):
     """Register Flask extensions."""
     CORS(app)
+    Talisman(app)
+    csrf = SeaSurf(app)
     extensions.cache.init_app(app, config={'CACHE_TYPE': 'simple'})
 
 

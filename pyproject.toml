@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "flask-base"
+version = "0.1.0"
+description = "A boilerplate Flask RESTful API"
+authors = ["Dung Nguyen <contact@dungnt.net>"]
+
+[tool.poetry.dependencies]
+python = "^3.5"
+flask = "^1.1"
+flask-caching = "^1.7"
+flask-cors = "^3.0"
+gunicorn = "^19.9"
+python-dateutil = "^2.8"
+simpleflake = "^0.1.5"
+sentry-sdk = "^0.13.1"
+redis = "^3.3"
+meinheld = "^1.0"
+flask-talisman = "^0.7.0"
+flask-seasurf = "^0.2.2"
+
+[tool.poetry.dev-dependencies]
+flake8 = "^3.7"
+flake8-builtins = "^1.4"
+flake8-blind-except = "^0.1.1"
+flake8-import-order = "^0.18.1"
+coverage = "^4.5"
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"

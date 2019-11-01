@@ -10,11 +10,6 @@ config.from_object(os.getenv('FLASK_CONFIG') or 'config')
 
 cache = Cache(config=config.get('CACHE'))
 
-if config.get("MONGO_URI", None):
-    from mongoengine import connect
-
-    db = connect(alias="default", host=config.get("MONGO_URI", "localhost"))
-
 if config.get('REDIS_URL', None):
     from redis import StrictRedis
 
