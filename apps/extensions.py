@@ -4,11 +4,13 @@ import os
 
 from flask import Config
 from flask_caching import Cache
+from flask_seasurf import SeaSurf
 
 config = Config(root_path='')
 config.from_object(os.getenv('FLASK_CONFIG') or 'config')
 
 cache = Cache(config=config.get('CACHE'))
+csrf = SeaSurf()
 
 if config.get('REDIS_URL', None):
     from redis import StrictRedis

@@ -1,16 +1,11 @@
 # -*- coding: utf-8 -*-
 """The apps module, containing the apps factory function."""
-
 from flask import Flask, jsonify
 from flask_cors import CORS
 from flask_talisman import Talisman
-from flask_seasurf import SeaSurf
 
-
-# Import module
 from apps import commands, extensions
 from apps.common.json_error import JsonError
-
 from apps.v1 import starter
 
 
@@ -36,8 +31,9 @@ def register_extensions(app):
     """Register Flask extensions."""
     CORS(app)
     Talisman(app)
-    csrf = SeaSurf(app)
+
     extensions.cache.init_app(app, config={'CACHE_TYPE': 'simple'})
+    extensions.csrf.init_app(app)
 
 
 def register_blueprints(app):
