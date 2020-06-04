@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Extensions module. Each extension is initialized in the app factory located in app/__init__.py."""
+"""Extensions module. Each extension is initialized in the apps factory located in apps/__init__.py."""
 import os
 
 from flask import Config

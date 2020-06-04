@@ -1,2 +1,2 @@
 # -*- coding: utf-8 -*-
-"""Tests for the app."""
+"""Tests for the apps."""

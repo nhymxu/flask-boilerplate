@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""The app module, containing the app factory function."""
+"""The apps module, containing the apps factory function."""
 
 from flask import Flask, jsonify
 from flask_cors import CORS
@@ -8,10 +8,10 @@ from flask_seasurf import SeaSurf
 
 
 # Import module
-from app import commands, extensions
-from app.common.json_error import JsonError
+from apps import commands, extensions
+from apps.common.json_error import JsonError
 
-from app.v1 import starter
+from apps.v1 import starter
 
 
 def create_app():
@@ -20,8 +20,8 @@ def create_app():
     """
     app = Flask(__name__)
 
-    # app.url_map.strict_slashes = False
-    # app.config.from_object('config')
+    # apps.url_map.strict_slashes = False
+    # apps.config.from_object('config')
 
     register_extensions(app)
     register_blueprints(app)
