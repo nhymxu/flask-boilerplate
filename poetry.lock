@@ -421,7 +421,7 @@ description = "Python client for Sentry (https://sentry.io)"
 name = "sentry-sdk"
 optional = false
 python-versions = "*"
-version = "0.17.8"
+version = "0.18.0"
 
 [package.dependencies]
 certifi = "*"
@@ -519,7 +519,7 @@ docs = ["sphinx", "jaraco.packaging (>=3.2)", "rst.linker (>=1.9)"]
 testing = ["pathlib2", "unittest2", "jaraco.itertools", "func-timeout"]
 
 [metadata]
-content-hash = "196ca3a211141f260d188e5d68597379252a5a7f90d3f0db45f3d0aa8265ca72"
+content-hash = "b1fce3e4d859ace5ed6408b1dd405a5cdc0ff1c6165cbd4c2a6849d6fc736c51"
 lock-version = "1.0"
 python-versions = "^3.5"
 
@@ -746,8 +746,8 @@ redis = [
     {file = "redis-3.5.3.tar.gz", hash = "sha256:0e7e0cfca8660dea8b7d5cd8c4f6c5e29e11f31158c0b0ae91a397f00e5a05a2"},
 ]
 sentry-sdk = [
-    {file = "sentry-sdk-0.17.8.tar.gz", hash = "sha256:e159f7c919d19ae86e5a4ff370fccc45149fab461fbeb93fb5a735a0b33a9cb1"},
-    {file = "sentry_sdk-0.17.8-py2.py3-none-any.whl", hash = "sha256:c9c0fa1412bad87104c4eee8dd36c7bbf60b0d92ae917ab519094779b22e6d9a"},
+    {file = "sentry-sdk-0.18.0.tar.gz", hash = "sha256:1d91a0059d2d8bb980bec169578035c2f2d4b93cd8a4fb5b85c81904d33e221a"},
+    {file = "sentry_sdk-0.18.0-py2.py3-none-any.whl", hash = "sha256:6222cf623e404c3e62b8e0e81c6db866ac2d12a663b7c1f7963350e3f397522a"},
 ]
 simpleflake = [
     {file = "simpleflake-0.1.5.tar.gz", hash = "sha256:6f0c1a092c44900902fea6d4347317cda8ebdfaa636a2ec71be9395c4880a3b2"},
