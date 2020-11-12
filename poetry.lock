@@ -396,7 +396,7 @@ hiredis = ["hiredis (>=0.1.3)"]
 
 [[package]]
 name = "sentry-sdk"
-version = "0.19.2"
+version = "0.19.3"
 description = "Python client for Sentry (https://sentry.io)"
 category = "main"
 optional = false
@@ -499,7 +499,7 @@ testing = ["pathlib2", "unittest2", "jaraco.itertools", "func-timeout"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.5"
-content-hash = "1771375969013d4a512bba65d09967a081ab71c617785909d53aef10fe8df284"
+content-hash = "e8fcae33e549f6d8b0ee21177a90bf452be7bb2d14f2fc986f590bac0c0e776a"
 
 [metadata.files]
 atomicwrites = [
@@ -724,8 +724,8 @@ redis = [
     {file = "redis-3.5.3.tar.gz", hash = "sha256:0e7e0cfca8660dea8b7d5cd8c4f6c5e29e11f31158c0b0ae91a397f00e5a05a2"},
 ]
 sentry-sdk = [
-    {file = "sentry-sdk-0.19.2.tar.gz", hash = "sha256:17b725df2258354ccb39618ae4ead29651aa92c01a92acf72f98efe06ee2e45a"},
-    {file = "sentry_sdk-0.19.2-py2.py3-none-any.whl", hash = "sha256:9040539485226708b5cad0401d76628fba4eed9154bf301c50579767afe344fd"},
+    {file = "sentry-sdk-0.19.3.tar.gz", hash = "sha256:fd48f627945511c140546939b4d73815be4860cd1d2b9149577d7f6563e7bd60"},
+    {file = "sentry_sdk-0.19.3-py2.py3-none-any.whl", hash = "sha256:81d7a5d8ca0b13a16666e8280127b004565aa988bfeec6481e98a8601804b215"},
 ]
 simpleflake = [
     {file = "simpleflake-0.1.5.tar.gz", hash = "sha256:6f0c1a092c44900902fea6d4347317cda8ebdfaa636a2ec71be9395c4880a3b2"},
