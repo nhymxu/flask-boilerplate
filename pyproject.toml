@@ -16,7 +16,7 @@ sentry-sdk = "^0.19.5"
 redis = "^3.3"
 meinheld = "^1.0"
 flask-talisman = "^0.7.0"
-flask-seasurf = "^0.2.2"
+flask-seasurf = "^0.3.0"
 
 [tool.poetry.dev-dependencies]
 flake8 = "^3.8"
