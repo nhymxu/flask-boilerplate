@@ -128,11 +128,11 @@ dotenv = ["python-dotenv"]
 
 [[package]]
 name = "flask-caching"
-version = "1.9.0"
+version = "1.10.0"
 description = "Adds caching support to your Flask application"
 category = "main"
 optional = false
-python-versions = "*"
+python-versions = ">=3.5"
 
 [package.dependencies]
 Flask = "*"
@@ -499,7 +499,7 @@ testing = ["pathlib2", "unittest2", "jaraco.itertools", "func-timeout"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.5"
-content-hash = "81ecf7622b12f761f2132e19d5c1d8260914e6a8ff97318c2053fc8c473c32f8"
+content-hash = "fde0e5ce37c67cd48a41e6cddb544d023666f0d84907db243b7f5d829d3c72ce"
 
 [metadata.files]
 atomicwrites = [
@@ -596,8 +596,8 @@ flask = [
     {file = "Flask-1.1.2.tar.gz", hash = "sha256:4efa1ae2d7c9865af48986de8aeb8504bf32c7f3d6fdc9353d34b21f4b127060"},
 ]
 flask-caching = [
-    {file = "Flask-Caching-1.9.0.tar.gz", hash = "sha256:a0356ad868b1d8ec2d0e675a6fe891c41303128f8904d5d79e180d8b3f952aff"},
-    {file = "Flask_Caching-1.9.0-py2.py3-none-any.whl", hash = "sha256:e6ef2e2af84e13c4fd32c1839c1943a42f11b6b0fbcfdd6bf46547ea5482dbfe"},
+    {file = "Flask-Caching-1.10.0.tar.gz", hash = "sha256:f3f826790abe3b7797d42b0ad0356328d3c68651a3acb22a016728734cf43c91"},
+    {file = "Flask_Caching-1.10.0-py3-none-any.whl", hash = "sha256:27ddf54b2d160267b5fd70400359fc79dba5a87aa6e53abde89e627eb0fd4540"},
 ]
 flask-cors = [
     {file = "Flask-Cors-3.0.10.tar.gz", hash = "sha256:b60839393f3b84a0f3746f6cdca56c1ad7426aa738b70d6c61375857823181de"},
