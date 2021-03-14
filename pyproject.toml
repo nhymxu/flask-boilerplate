@@ -19,7 +19,7 @@ flask-talisman = "^0.7.0"
 flask-seasurf = "^0.3.0"
 
 [tool.poetry.dev-dependencies]
-flake8 = "^3.8"
+flake8 = "^3.9"
 flake8-builtins = "^1.4"
 flake8-blind-except = "^0.2.0"
 coverage = "^5.5"
