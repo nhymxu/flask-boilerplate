@@ -1,0 +1,13 @@
+version: 2
+updates:
+- package-ecosystem: pip
+  directory: "/"
+  schedule:
+    interval: daily
+    time: "22:00"
+    timezone: Asia/Jakarta
+  open-pull-requests-limit: 10
+  reviewers:
+  - nhymxu
+  assignees:
+  - nhymxu
