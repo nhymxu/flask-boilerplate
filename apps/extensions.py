@@ -12,6 +12,8 @@ config.from_object(os.getenv('FLASK_CONFIG') or 'config')
 cache = Cache(config=config.get('CACHE'))
 csrf = SeaSurf()
 
+SECRET_KEY = config.get('SECRET_KEY', 'super_secret_key')
+
 if config.get('REDIS_URL', None):
     from redis import StrictRedis
 

@@ -11,7 +11,7 @@ from apps.v1 import starter
 
 def create_app():
     """An application factory, as explained here:
-    http://flask.pocoo.org/docs/patterns/appfactories/.
+    https://flask.pocoo.org/docs/patterns/appfactories/.
     """
     app = Flask(__name__)
 
@@ -20,8 +20,8 @@ def create_app():
 
     register_extensions(app)
     register_blueprints(app)
-    register_errorhandlers(app)
-    register_shellcontext(app)
+    register_error_handlers(app)
+    register_shell_context(app)
     register_commands(app)
 
     return app
@@ -35,6 +35,8 @@ def register_extensions(app):
     extensions.cache.init_app(app, config={'CACHE_TYPE': 'simple'})
     extensions.csrf.init_app(app)
 
+    app.secret_key = extensions.SECRET_KEY
+
 
 def register_blueprints(app):
     """Register Flask blueprints."""
@@ -45,7 +47,7 @@ def register_blueprints(app):
     app.register_blueprint(starter.routes.blueprint, url_prefix='/v1/starter')
 
 
-def register_errorhandlers(app):
+def register_error_handlers(app):
     def handle_json_error(error):
         response = jsonify(error.to_dict())
         # response = error.to_json()
@@ -55,7 +57,7 @@ def register_errorhandlers(app):
     app.errorhandler(JsonError)(handle_json_error)
 
 
-def register_shellcontext(app):
+def register_shell_context(app):
     """Register shell context objects."""
     pass
 

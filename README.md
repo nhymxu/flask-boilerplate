@@ -42,6 +42,13 @@ poetry install
 ### Run flask for dev
 `python run.py`
 
+### Test route
+
+```
+http://localhost:8000/ping
+http://localhost:8000/v1/starter
+```
+
 # Test before pull request or commit
 
 ## Check code style
