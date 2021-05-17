@@ -35,6 +35,8 @@ def register_extensions(app):
     extensions.cache.init_app(app, config={'CACHE_TYPE': 'simple'})
     extensions.csrf.init_app(app)
 
+    app.secret_key = extensions.SECRET_KEY
+
 
 def register_blueprints(app):
     """Register Flask blueprints."""

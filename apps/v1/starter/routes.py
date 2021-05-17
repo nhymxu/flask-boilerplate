@@ -7,4 +7,4 @@ blueprint = Blueprint('v1_starter', __name__)
 
 @blueprint.route('/', methods=['GET'])
 def get_starter():
-    pass
+    return 'Hello page'
