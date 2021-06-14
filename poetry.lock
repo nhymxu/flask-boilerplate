@@ -162,7 +162,7 @@ Flask = "*"
 
 [[package]]
 name = "flask-talisman"
-version = "0.8.0"
+version = "0.8.1"
 description = "HTTP security headers for Flask."
 category = "main"
 optional = false
@@ -498,7 +498,7 @@ testing = ["pathlib2", "unittest2", "jaraco.itertools", "func-timeout"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.5"
-content-hash = "7fa85f30ef26d9eda5998ad7f09619740575a7321a7f6b1f5042438b230c0a38"
+content-hash = "27331986640e9fe485fc6696768566d8a68d638255fda6e26272960c74694946"
 
 [metadata.files]
 atomicwrites = [
@@ -607,8 +607,8 @@ flask-seasurf = [
     {file = "Flask_SeaSurf-0.3.0-py3-none-any.whl", hash = "sha256:505c1101e5489ef3505bb6d6bc722808ed4e6882606e07006d9914c06fb5878c"},
 ]
 flask-talisman = [
-    {file = "flask-talisman-0.8.0.tar.gz", hash = "sha256:6e5bf4de9592b6983f61dc2115a000145a5c4319cd606028342032827891fa1a"},
-    {file = "flask_talisman-0.8.0-py2.py3-none-any.whl", hash = "sha256:930eb20e6265b6f67edde3d564fcc1aa8be2cbe14d10f17dfea1e76fd68e8f20"},
+    {file = "flask-talisman-0.8.1.tar.gz", hash = "sha256:5d502ec0c51bf1755a797b8cffbe4e94f8684af712ba0b56f3d80b79277ef285"},
+    {file = "flask_talisman-0.8.1-py2.py3-none-any.whl", hash = "sha256:08a25360c771f7a79d6d4db2abfa71f7422e62a714418b671d69d6a201764d05"},
 ]
 greenlet = [
     {file = "greenlet-0.4.17-cp27-cp27m-manylinux1_x86_64.whl", hash = "sha256:75e4c27188f28149b74e7685809f9227410fd15432a4438fc48627f518577fa5"},
