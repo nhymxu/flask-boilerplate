@@ -71,7 +71,7 @@ pyflakes = ">=2.3.0,<2.4.0"
 
 [[package]]
 name = "flake8-blind-except"
-version = "0.2.0"
+version = "0.2.1"
 description = "A flake8 extension that checks for blind except: statements"
 category = "dev"
 optional = false
@@ -497,7 +497,7 @@ testing = ["pathlib2", "unittest2", "jaraco.itertools", "func-timeout"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.5"
-content-hash = "d37135a94b8e8fadf760405cb67e38a0c7172f5ac8677d4722b607de98c38e73"
+content-hash = "b4358f12851ef92d41c51bec882a6090848668988f07d96acd038719a51f66fb"
 
 [metadata.files]
 atomicwrites = [
@@ -579,7 +579,7 @@ flake8 = [
     {file = "flake8-3.9.2.tar.gz", hash = "sha256:07528381786f2a6237b061f6e96610a4167b226cb926e2aa2b6b1d78057c576b"},
 ]
 flake8-blind-except = [
-    {file = "flake8-blind-except-0.2.0.tar.gz", hash = "sha256:02a860a1a19cb602c006a3fe0778035b0d14d3f57929b4b798bc7d6684f204e5"},
+    {file = "flake8-blind-except-0.2.1.tar.gz", hash = "sha256:f25a575a9dcb3eeb3c760bf9c22db60b8b5a23120224ed1faa9a43f75dd7dd16"},
 ]
 flake8-builtins = [
     {file = "flake8-builtins-1.5.3.tar.gz", hash = "sha256:09998853b2405e98e61d2ff3027c47033adbdc17f9fe44ca58443d876eb00f3b"},
