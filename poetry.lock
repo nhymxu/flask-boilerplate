@@ -151,7 +151,7 @@ Six = "*"
 
 [[package]]
 name = "flask-seasurf"
-version = "1.0.0"
+version = "1.1.1"
 description = "An updated CSRF extension for Flask."
 category = "main"
 optional = false
@@ -497,7 +497,7 @@ testing = ["pathlib2", "unittest2", "jaraco.itertools", "func-timeout"]
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.5"
-content-hash = "5e090f6eb598e79cc16fcdf83c1f3a836166c09528bbdbe5e3ae8a21c4370a13"
+content-hash = "277038c56e6b874a9de6bbfdce32b406b1f0c391f35a5b465a201c2cc09bfbe7"
 
 [metadata.files]
 atomicwrites = [
@@ -602,8 +602,8 @@ flask-cors = [
     {file = "Flask_Cors-3.0.10-py2.py3-none-any.whl", hash = "sha256:74efc975af1194fc7891ff5cd85b0f7478be4f7f59fe158102e91abb72bb4438"},
 ]
 flask-seasurf = [
-    {file = "Flask-SeaSurf-1.0.0.tar.gz", hash = "sha256:3d93cf8b77008ffd5c8ce0ddd9a50882eec580ec459d24e9566c934a57dff6da"},
-    {file = "Flask_SeaSurf-1.0.0-py3-none-any.whl", hash = "sha256:ab2978b3464bae9dc1baf0d1e7c4d9cbce9b10224f81323fdfb7e305eeb93940"},
+    {file = "Flask-SeaSurf-1.1.1.tar.gz", hash = "sha256:54537008c769ac0ada8237877327c3e7ed74dcd8b01e74a9120ee0232c5951a9"},
+    {file = "Flask_SeaSurf-1.1.1-py3-none-any.whl", hash = "sha256:f70e58b3b5e8fa9a928fe6b8e7a01b953d67cb9b7bde1a54d1ec95e40fcc2ade"},
 ]
 flask-talisman = [
     {file = "flask-talisman-1.0.0.tar.gz", hash = "sha256:205d3de7c5ecfad667c84123f5fbe580b1f68cd9a1b058d7353cc0348e15b1bf"},
