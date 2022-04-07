@@ -43,6 +43,15 @@ jobs:
           # black . --check
           isort .
 
+  dependency-review:
+    runs-on: "ubuntu-latest"
+    steps:
+      - name: Checkout code
+        uses: action/checkout@v3
+      
+      - name: Dependency review
+        uses: actions/dependency-review-action@v1
+
   tests:
     needs: linting
     runs-on: "ubuntu-latest"
