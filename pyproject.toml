@@ -1,0 +1,84 @@
+[tool.poetry]
+name = "flask-boilerplate"
+version = "0.1.0"
+description = ""
+authors = ["nhymxu"]
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+flask = {extras = ["async", "dotenv"], version= "^3.0.2"}
+python-dotenv = "^1.0.1"
+httpx = "^0.27.0"
+
+uvicorn = {extras = ["standard"], version = "^0.29.0"}
+gunicorn = "^21.2.0"
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.3.4"
+
+
+[tool.ruff]
+exclude = [
+    ".git",
+    "__pycache__",
+    ".env",
+    ".venv",
+    "old",
+    "build",
+    "dist",
+    "tests",
+    "exclude",
+]
+line-length = 120
+indent-width = 4
+
+[tool.ruff.lint]
+select = [
+    "E",
+    "F",
+    "W",
+]
+ignore = [
+    "F841",
+    "W605",
+]
+
+# Allow fix for all enabled rules (when `--fix`) is provided.
+fixable = ["ALL"]
+unfixable = []
+
+# Allow unused variables when underscore-prefixed.
+dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
+
+[tool.ruff.format]
+# Like Black, use double quotes for strings.
+quote-style = "double"
+
+# Like Black, indent with spaces, rather than tabs.
+indent-style = "space"
+
+# Like Black, respect magic trailing commas.
+skip-magic-trailing-comma = false
+
+# Like Black, automatically detect the appropriate line ending.
+line-ending = "auto"
+
+[tool.mypy]
+exclude = [
+    'exclude/',
+]
+ignore_missing_imports = true
+
+[tool.pylint.FORMAT]
+max-line-length = 120
+
+[tool.pylint.MASTER]
+init-hook="from pylint.config import find_pylintrc; import os, sys; sys.path.append(os.path.dirname(find_pylintrc()))"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
