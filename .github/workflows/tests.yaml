@@ -1,0 +1,53 @@
+name: Tests
+on:
+  push:
+    branches:
+      - main
+      - master
+    paths-ignore:
+      - 'docs/**'
+      - '*.md'
+      - '*.rst'
+  pull_request:
+    branches:
+      - main
+      - master
+    paths-ignore:
+      - 'docs/**'
+      - '*.md'
+      - '*.rst'
+
+jobs:
+  linting:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Ruff lint
+        uses: chartboost/ruff-action@v1
+
+  tests:
+    needs: linting
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: true
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install poetry
+        run: pipx install poetry
+
+      - name: Setup python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'poetry'
+
+      - name: Install library
+        run: poetry install --no-interaction
+
+      - name: Run test
+        run: poetry run pytest

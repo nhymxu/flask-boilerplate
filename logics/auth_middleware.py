@@ -1,7 +1,7 @@
 import os
 from functools import wraps
 
-from flask import request
+from flask import current_app, request
 
 from .exceptions import APIException
 
@@ -10,9 +10,7 @@ class AuthMiddleware:
 
     @staticmethod
     def is_valid_token(token):
-        secret_key = os.getenv('SERVER_AUTH_KEY')
-
-        return token == secret_key
+        return token == current_app.config["SERVER_AUTH_KEY"]
 
     def authenticate(self):
         auth_token = request.headers.get('X-Api-Key')

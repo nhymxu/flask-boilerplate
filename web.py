@@ -1,3 +1,5 @@
+import os
+
 from asgiref.wsgi import WsgiToAsgi
 from dotenv import load_dotenv
 from flask import Flask
@@ -8,19 +10,20 @@ from logics.error_handler import ErrorHandler
 
 load_dotenv()
 app = Flask(__name__)
+app.config['SERVER_AUTH_KEY'] = os.getenv('SERVER_AUTH_KEY')
 ErrorHandler(app)
 
 asgi_app = WsgiToAsgi(app)
 
 
 @app.get('/')
-def hello_handler():
+async def hello_handler():
     return 'Hello world'
 
 
 @app.get('/protected')
 @require_authentication
-async def protected():
+def protected():
     return 'protected'
 
 
