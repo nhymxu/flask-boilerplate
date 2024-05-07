@@ -1,19 +1,17 @@
 import base64
 import io
-import os
 
 from asgiref.wsgi import WsgiToAsgi
 from dotenv import load_dotenv
-from flask import Flask, send_file
+from flask import send_file
 
 from logics.auth_middleware import require_authentication
-from logics.error_handler import ErrorHandler
+
+from logics.webserver import create_app
 
 
 load_dotenv()
-app = Flask(__name__)
-app.config['SERVER_AUTH_KEY'] = os.getenv('SERVER_AUTH_KEY')
-ErrorHandler(app)
+app = create_app()
 
 asgi_app = WsgiToAsgi(app)
 
