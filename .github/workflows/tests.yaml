@@ -28,6 +28,8 @@ jobs:
         uses: chartboost/ruff-action@v1
 
   tests:
+    # TODO: temporary disable because not log poetry.lock file on repo
+    if: ${{ false }}
     needs: linting
     runs-on: ubuntu-latest
     strategy:
