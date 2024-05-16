@@ -6,9 +6,7 @@ from dotenv import load_dotenv
 from flask import send_file
 
 from logics.auth_middleware import require_authentication
-
 from logics.webserver import create_app
-
 
 load_dotenv()
 app = create_app()

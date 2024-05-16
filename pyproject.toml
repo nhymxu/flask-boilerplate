@@ -41,6 +41,7 @@ indent-width = 4
 select = [
     "E",
     "F",
+    "I",
     "W",
 ]
 ignore = [
