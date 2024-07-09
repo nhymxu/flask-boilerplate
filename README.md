@@ -23,6 +23,12 @@ async: Hypercorn/uvcorn
 pip install "uvicorn[standard]" gunicorn
 ````
 
+Note: on MacOS. Run this command to fix gunicorn error
+
+```shell
+export NO_PROXY=*
+```
+
 ```shell
 hypercorn web:asgi_app
 
