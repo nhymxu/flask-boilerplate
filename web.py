@@ -1,7 +1,7 @@
 import base64
 import io
 
-from asgiref.wsgi import WsgiToAsgi
+from a2wsgi import WSGIMiddleware
 from dotenv import load_dotenv
 from flask import send_file
 
@@ -11,7 +11,7 @@ from logics.webserver import create_app
 load_dotenv()
 app = create_app()
 
-asgi_app = WsgiToAsgi(app)
+asgi_app = WSGIMiddleware(app)
 
 
 @app.get('/favicon.ico')

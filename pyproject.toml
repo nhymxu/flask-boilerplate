@@ -4,7 +4,6 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
 name = "flask-boilerplate"
-dynamic = ["version"]
 description = ""
 authors = ["nhymxu"]
 readme = "README.md"
@@ -15,6 +14,7 @@ python = "^3.12"
 
 uvicorn = {extras = ["standard"], version = "^0.30.0"}
 gunicorn = "^22.0.0"
+a2wsgi = "^1.10.6"
 
 flask = {extras = ["async", "dotenv"], version= "^3.0.3"}
 python-dotenv = "^1.0.1"
