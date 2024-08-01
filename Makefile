@@ -39,3 +39,29 @@ fmt:
 
 dev:
 	flask --app web run
+
+#  Misc
+.PHONY: clean  ## misc - Clear local caches and build artifacts
+clean:
+	@echo "\033[1mCleaning up:\033[0m\n\033[35m This will remove all local caches and build artifacts\033[0m"
+	@rm -rf `find . -name __pycache__`
+	@rm -f `find . -type f -name '*.py[co]'`
+	@rm -f `find . -type f -name '*~'`
+	@rm -f `find . -type f -name '.*~'`
+	@rm -rf .run
+	@rm -rf .venv
+	@rm -rf .venvs
+	@rm -rf .cache
+	@rm -rf .pytest_cache
+	@rm -rf .ruff_cache
+	@rm -rf htmlcov
+	@rm -rf *.egg-info
+	@rm -f .coverage
+	@rm -f .coverage.*
+	@rm -rf build
+	@rm -rf dist
+	@rm -rf site
+	@rm -rf docs/_build
+	@rm -rf docs/.changelog.md docs/.version.md docs/.tmp_schema_mappings.html
+	@rm -rf fastapi/test.db
+	@rm -rf coverage.xml
