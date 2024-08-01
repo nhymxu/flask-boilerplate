@@ -3,7 +3,7 @@ import io
 
 from a2wsgi import WSGIMiddleware
 from dotenv import load_dotenv
-from flask import send_file
+from flask import request, send_file
 
 from logics.auth_middleware import require_authentication
 from logics.webserver import create_app
@@ -12,6 +12,14 @@ load_dotenv()
 app = create_app()
 
 asgi_app = WSGIMiddleware(app)
+
+
+@app.before_request
+def method_override():
+    if request.method == 'POST' and '_method' in request.form:
+        method = request.form['_method'].upper()
+        if method in ['PUT', 'DELETE', 'PATCH']:
+            request.environ['REQUEST_METHOD'] = method
 
 
 @app.get('/favicon.ico')
