@@ -23,8 +23,16 @@ stamina = "^24.2.0"
 
 [tool.poetry.group.dev.dependencies]
 ruff = "^0.4.3"
-pytest = "^8.2.0"
 
+[tool.poetry.group.test.dependencies]
+coverage = {extras = ["toml"], version = "^7.6.0"}
+pytest = "^8.2.0"
+pytest-asyncio = "^0.23.8"
+pytest-cov = "^5.0.0"
+pytest-mock = "^3.14.0"
+pytest-order = "^1.2.1"
+pytest-randomly = "^3.15.0"
+time-machine = "^2.14.2"
 
 [tool.ruff]
 exclude = [
