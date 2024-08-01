@@ -34,7 +34,7 @@ help: ## Display this help section
 check:
 	ruff check .
 
-check-fix:
+fmt:
 	ruff check . --fix
 
 dev:
