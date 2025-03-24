@@ -1,2 +1,6 @@
 [tools]
 python = "3.12"
+
+[settings]
+python.uv_venv_auto = true
+#_.python.venv = { path = ".venv" }
