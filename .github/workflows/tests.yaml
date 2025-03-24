@@ -46,10 +46,16 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-          cache: 'poetry'
+
+      - name: install uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
 
       - name: Install library
-        run: poetry install --no-interaction
+        run: uv sync --all-extras --all-groups --no-install-project
+        working-directory: ${{ github.workspace }}
 
       - name: Run test
-        run: poetry run pytest
+        run: uv run pytest --import-mode=importlib
+        working-directory: ${{ github.workspace }}

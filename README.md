@@ -1,5 +1,21 @@
 # flask-boilerplate
 
+## Install
+
+### for dev & test
+
+```shell
+uv sync --all-groups
+```
+
+### Production
+
+```shell
+uv sync --no-group dev
+uv sync --no-group dev --group production
+uv sync --group production
+```
+
 ## Local run
 
 ```shell

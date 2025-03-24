@@ -1,4 +1,4 @@
-FROM python:3.12-slim
+FROM ghcr.io/astral-sh/uv:python3.12-bookworm-slim AS builder
 
 ENV PYTHONUNBUFFERED=1 \
     # prevents python creating .pyc files
@@ -9,23 +9,32 @@ ENV PYTHONUNBUFFERED=1 \
     PIP_DISABLE_PIP_VERSION_CHECK=on \
     PIP_DEFAULT_TIMEOUT=100 \
     \
-    # poetry
+    # uv
     # do not ask any interactive question
-    POETRY_NO_INTERACTION=1 \
-    POETRY_VIRTUALENVS_CREATE=false \
-    POETRY_CACHE_DIR=/tmp/poetry_cache
+    UV_COMPILE_BYTECODE=1 \
+    UV_LINK_MODE=copy
+
+# Disable Python downloads, because we want to use the system interpreter
+# across both images. If using a managed Python version, it needs to be
+# copied from the build image into the final image; see `standalone.Dockerfile`
+# for an example.
+ENV UV_PYTHON_DOWNLOADS=0
 
 WORKDIR /app
 
-COPY pyproject.toml poetry.lock ./
+RUN --mount=type=cache,target=/root/.cache/uv \
+    --mount=type=bind,source=uv.lock,target=uv.lock \
+    --mount=type=bind,source=pyproject.toml,target=pyproject.toml \
+    uv sync --frozen --no-install-project --no-dev
+ADD . /app
+RUN --mount=type=cache,target=/root/.cache/uv \
+    uv sync --frozen --no-dev
 
-#RUN pip install poetry && \
-#    poetry export -f requirements.txt --output requirements.txt && \
-#    pip install -r requirements.txt
-RUN pip install poetry &&  \
-    poetry install --only main --no-root && \
-    rm -rf $POETRY_CACHE_DIR
 
-COPY . /app
+FROM python:3.12-slim-bookworm
+
+COPY --from=builder --chown=app:app /app /app
+
+ENV PATH="/app/.venv/bin:$PATH"
 
 CMD ["gunicorn", "web:asgi_app", "--worker-class", "uvicorn.workers.UvicornWorker", "--bind", "0.0.0.0:80"]
