@@ -112,3 +112,4 @@ venv.bak/
 config.py
 Pipfile.lock
 poetry.lock
+uv.lock
