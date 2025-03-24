@@ -8,12 +8,12 @@ authors = [{ name = "nhymxu", email = "contact@dungnt.net" }]
 requires-python = "<4.0,>=3.12"
 dependencies = [
     "uvicorn[standard]<1.0.0,>=0.30.0",
-    "gunicorn<23.0.0,>=22.0.0",
     "a2wsgi<2.0.0,>=1.10.6",
     "flask[async,dotenv]<4.0.0,>=3.0.3",
     "python-dotenv<2.0.0,>=1.0.1",
     "httpx<1.0.0,>=0.27.0",
-    "stamina<25.0.0,>=24.2.0",
+    "gunicorn>=22.0.0",
+    "stamina>=24.3.0",
 ]
 
 [dependency-groups]
