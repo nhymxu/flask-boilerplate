@@ -11,7 +11,7 @@ dependencies = [
     "a2wsgi>=1.10.10,<2.0.0",
     "flask[async,dotenv]<4.0.0,>=3.0.3",
     "python-dotenv<2.0.0,>=1.0.1",
-    "httpx<1.0.0,>=0.27.0",
+    "httpx>=0.28.1,<1.0.0",
     "gunicorn>=22.0.0",
     "stamina>=26.1.0",
 ]
