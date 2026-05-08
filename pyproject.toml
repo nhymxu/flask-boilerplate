@@ -12,7 +12,7 @@ dependencies = [
     "flask[async,dotenv]>=3.1.3,<4.0.0",
     "python-dotenv<2.0.0,>=1.0.1",
     "httpx>=0.28.1,<1.0.0",
-    "gunicorn>=22.0.0",
+    "gunicorn>=26.0.0",
     "stamina>=26.1.0",
 ]
 
