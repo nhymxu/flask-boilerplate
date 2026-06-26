@@ -18,7 +18,7 @@ dependencies = [
 
 [dependency-groups]
 dev = [
-    "ruff>=0.15.17,<1.0.0",
+    "ruff>=0.15.20,<1.0.0",
 ]
 test = [
     "coverage[toml]>=7.14.1,<8.0.0",
